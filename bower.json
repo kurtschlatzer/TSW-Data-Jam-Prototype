@@ -1,11 +1,10 @@
 {
-  "name": "healthbyte",
-  "version": "0.0.0",
+  "name": "healthbyte2",
+  "private": true,
   "dependencies": {
-    "requirejs": "*",
+    "bootstrap-sass-official": "*",
     "modernizr": "*",
-    "jquery": "*",
-    "foundation": "*"
+    "jquery": "*"
   },
   "devDependencies": {}
 }

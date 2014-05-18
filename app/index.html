@@ -1,45 +1,106 @@
 <!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<html class="no-js">
+
 <head>
   <meta charset="utf-8">
-  <title>HealthByte</title>
-  <meta name="description" content="HealthByte Rocks!">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>healthbyte2</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-  <!-- build:css assets/styles/main.css -->
-  <link rel="stylesheet" href="assets/vendor/foundation/css/foundation.min.css">
-  <link rel="stylesheet" href="assets/styles/main.css">
-  <!-- endbuild -->  
-  
-  <!-- build:js assets/scripts/vendor/modernizr.js -->
-  <script src="assets/vendor/modernizr/modernizr.js"></script>
+  <!-- build:css styles/vendor.css -->
+  <!-- bower:css -->
+  <!-- endbower -->
   <!-- endbuild -->
 
-  <!-- build:js assets/vendor/foundation/js/foundation.js -->
-  <script src="assets/vendor/foundation/js/foundation.min.js"></script>
+  <!-- build:css styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
   <!-- endbuild -->
 
+  <!-- build:js scripts/vendor/modernizr.js -->
+  <script src="bower_components/modernizr/modernizr.js"></script>
+  <!-- endbuild -->
 </head>
+
 <body>
-  
-  <!-- Nav and Banner -->
-  <p>Navigation goes here.</p>
-  <!-- / Nav and Banner -->
 
-  <!-- Main Content Section -->
-  <p>Content goes here.</p>  
-  <!-- / Main Content Section -->
 
-  <!-- Footer -->
-  <p>&copy; Copyright HealthByte.co | <a href="https://github.com/kurtschlatzer/healthbyte">Github Project</a></p>
-  <!-- / Footer -->
 
-  <!-- build:js scripts/main.js -->
-  <script data-main="assets/scripts/main" src="assets/vendor/requirejs/require.js"></script>
-  <!-- endbuild -->
+  <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <span class="glyphicon glyphicon-lock"></span>&nbsp;HealthByte Login</div>
+            <div class="panel-body">
+              <form class="form-horizontal" role="form">
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-3 control-label">
+                    Email</label>
+                  <div class="col-sm-9">
+                    <input type="email" class="form-control" id="inputEmail3" placeholder="Email" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputPassword3" class="col-sm-3 control-label">
+                    Password</label>
+                  <div class="col-sm-9">
+                    <input type="password" class="form-control" id="inputPassword3" placeholder="Password" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-sm-offset-3 col-sm-9">
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" />Remember me
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group last">
+                  <div class="col-sm-offset-3 col-sm-9">
+                    <button type="submit" class="btn btn-success btn-sm">
+                      Sign in</button>
+                    <button type="reset" class="btn btn-default btn-sm">
+                      Reset</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="panel-footer">
+              Not Registred? <a href="http://www.jquery2dotnet.com">Register here</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- TODO: Remove unused Bootstrap plugins to reduce page load before presentation. -->
+    <!-- build:js scripts/plugins.js -->
+    <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/affix.js"></script>
+    <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/alert.js"></script>
+    <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/dropdown.js"></script>
+    <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/tooltip.js"></script>
+    <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/modal.js"></script>
+    <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/transition.js"></script>
+    <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/button.js"></script>
+    <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/popover.js"></script>
+    <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/carousel.js"></script>
+    <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/scrollspy.js"></script>
+    <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/collapse.js"></script>
+    <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/tab.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
 
 </body>
+
 </html>
