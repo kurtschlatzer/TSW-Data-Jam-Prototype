@@ -1,6 +1,7 @@
 // To instantiate FastClick on the body, which is the recommended method of use:
 
 window.addEventListener('load', function () {
+  'use strict';
   FastClick.attach(document.body);
 }, false);
 

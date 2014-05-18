@@ -1,11 +1,13 @@
 // Sample code for using the Fullscreen API
 // ==========================================
+'use strict';
 
 document.cancelFullScreen = document.webkitCancelFullScreen || document.mozCancelFullScreen || document.cancelFullScreen;
 
 document.body.requestFullScreen = document.body.webkitRequestFullScreen || document.body.mozRequestFullScreen || document.body.requestFullScreen;
 
 function displayFullScreenStatus() {
+  var isFullScreen;
   var status = isFullScreen() ? 'Document is now full screen.' : 'Document is currently not full screen.';
   document.querySelector('#status')
     .innerHTML = status;
@@ -23,7 +25,7 @@ function fullScreenElement() {
   return document.webkitFullScreenElement || document.webkitCurrentFullScreenElement || document.mozFullScreenElement || document.fullScreenElement;
 }
 
-var el = document.getElementById("fullscreenTest");
+var el = document.getElementById('fullscreenTest');
 
 el.requestFullScreen = el.webkitRequestFullScreen || el.mozRequestFullScreen || el.requestFullScreen;
 
@@ -37,8 +39,6 @@ document.body.onclick = function (e) {
     document.body.requestFullScreen();
   }
 };
-
-
 
 // TODO: Bootstrap layout is currently the only one which properly handles the fullscreen
 // button injection. This should be done more generally (i.e inject via index.js)
