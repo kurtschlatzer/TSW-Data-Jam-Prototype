@@ -1,0 +1,126 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link rel="stylesheet" href="assets/styles/main.css">
+        <!-- build:js scripts/vendor/modernizr.js -->
+        <script src="assets/vendor/modernizr/modernizr.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:css styles/vendor/foundation/stylesheets/foundation-min.css -->
+        <link rel="stylesheet" href="assets/vendor/foundation/css/foundation.min.css">
+        <!-- endbuild -->
+
+        <style type="text/css">
+          form input[type=checkbox] { margin-left: 25px;}
+          .warn { color: red; font-weight: 1000; }
+          .findAlt { display: none; }
+          table:first-of-type .findAlt { display: inline; }
+        </style>
+</head>
+    <body>
+
+  <!-- Main Content Section -->
+
+  <div class="row">
+    <div class="eight columns">
+      <a href="#" data-reveal-id="myModal"
+       style="color:white" class="primary small radius button">Capture Product Code</a>
+    </div>
+    <br />
+    <div class="eight columns">
+    <form>
+      Allergies:
+      <span><input type="checkbox" name="allergy" value="Milk" /> Milk</span>
+      <span><input type="checkbox" name="allergy" value="Wheat" checked /> Wheat</span>
+      <span><input type="checkbox" name="allergy" value="Eggs" /> Eggs</span>
+      <span><input type="checkbox" name="allergy" value="Soy" /> Soy</span>
+      <span><input type="checkbox" name="allergy" value="Peanuts" /> Peanuts</span>
+      <span><input type="checkbox" name="allergy" value="Tree Nuts" /> Tree Nuts</span>
+      <span><input type="checkbox" name="allergy" value="Shellfish" /> Shellfish</span>
+      <span><input type="checkbox" name="allergy" value="Fish" /> Fish</span>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+
+  <footer class="row">
+    <div class="twelve columns">
+      <hr>
+      <div class="row">
+        
+      </div>
+    </div>
+  </footer>
+
+  <div id="myModal" class="reveal-modal" data-reveal style="width:400px;height:340px;max-height:340px;margin-left: -12.5%;">
+    <h4>Take a picture</h4>
+    <div id="before">
+      <video id="video" width="320" height="240" autoplay></video>
+      <div style="visibility: hidden; max-height: 10px; height: 10px;">
+        <canvas id="canvas" width="320" height="240" style="display:block;"></canvas>
+      </div>
+    </div>
+    <div id="after" style="display:none">
+      <img id="image" width="320" height="240" />
+    </div>
+    <a class="close-reveal-modal">&#215;</a>
+  </div>
+<div class="row">
+    <div class="eight columns">
+  <div class="product" style="display: none">
+    <input type="hidden" name="upc-code" value="" />
+    <table width="800" border="0" cellpadding="2" cellspacing="0">
+      <tr valign="top">
+        <td width="250"><img class="product-image" src="nothing.jpg" alt="product image" width="250" height="250" /></td>
+        <td>
+          <h4>
+            <span class="product-name"></span>
+          </h4>
+          
+          <p>
+            <strong>Ingredients</strong>: 
+            <span class="ingredients"></span>
+          </p>
+          
+          <p>
+            <strong>Contains</strong>: 
+            <span class="contains">&#151;</span>
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2"><button class="findAlt">Find alternatives</button>
+      </td>
+    </table>
+  </div></div></div>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src='//www.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+
+  <!-- build:js scripts/main.js -->
+  <script data-main="assets/scripts/start" src="assets/vendor/requirejs/require.js"></script>
+  <!-- endbuild -->
+
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.2.2/js/foundation.min.js"></script>
+  <script src="assets/vendor/foundation/js/foundation/foundation.reveal.js"></script>
+  <script>
+      $(document).foundation();
+   </script>
+</body>
+</html>
